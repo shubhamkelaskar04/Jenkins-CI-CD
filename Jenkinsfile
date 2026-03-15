@@ -35,9 +35,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'mkdir C:\\deploy'
+                bat 'echo Deployment Success > test.txt'
                 bat 'copy test.txt C:\\deploy'
             }
         }
-
     }
 }
