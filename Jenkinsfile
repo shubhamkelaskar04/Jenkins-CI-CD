@@ -35,8 +35,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'mkdir C:\\deploy'
-                bat 'echo Deployment Success > test.txt'
-                bat 'copy test.txt C:\\deploy'
+                bat 'copy target\\jenkins-demo-1.0.jar C:\\deploy'
             }
         }
     }
