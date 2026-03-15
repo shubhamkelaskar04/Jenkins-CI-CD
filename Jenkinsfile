@@ -34,8 +34,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'mkdir C:\\deploy'
-                bat 'copy target\\jenkins-demo-1.0.jar C:\\deploy'
+                bat '''
+                if not exist C:\\deploy mkdir C:\\deploy
+                copy target\\jenkins-demo-1.0.jar C:\\deploy
+                '''
             }
         }
     }
