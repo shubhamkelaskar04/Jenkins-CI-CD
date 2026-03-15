@@ -29,8 +29,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying Application...'
-                bat 'copy target\\app.jar C:\\deployment\\'
+                bat 'mkdir C:\\deploy'
+                bat 'copy test.txt C:\\deploy'
             }
         }
 
